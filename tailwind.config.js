@@ -5,6 +5,14 @@ module.exports = {
     fontFamily: {
       Poppins: ['Poppins'],
     },
+    extend: {
+      colors: {
+        primary: '#B78D5A',
+        primary2: '#BEC7C5',
+        secondary: '#67432F',
+        secondary2: '#8C969E',
+      },
+    },
   },
   plugins: [],
 }
