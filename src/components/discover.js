@@ -7,7 +7,7 @@ function Discover() {
       <div className="w-11/12 h-full mx-auto">
         <p className="text-sm font-light mb-2">Explore Nanny Options</p>
 
-        <p className="text-3xl lg:text-5xl text-secondary leading-tight lg:leading-tight font-semibold">
+        <p className="lg:w-8/12 text-3xl lg:text-5xl text-secondary leading-tight lg:leading-tight font-semibold">
           Discover Your Nanny Match
         </p>
 
