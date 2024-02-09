@@ -5,6 +5,7 @@ import Discover from "../components/discover"
 import HowItWorks from "../components/howItWorks"
 import FAQ from "../components/faq"
 import BecomeNanny from "../components/becomeNanny"
+import Footer from "../components/footer"
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <HowItWorks />
       <FAQ />
       <BecomeNanny />
+      <Footer />
     </div>
   )
 }
