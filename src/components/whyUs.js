@@ -2,18 +2,18 @@ import React from "react"
 
 function WhyUs() {
   return (
-    <div className="w-11/12 mx-auto py-20">
+    <div className="w-11/12 mx-auto py-20 lg:py-32">
       <p className="lg:w-8/12 mx-auto text-center text-sm font-light mb-2">Why Hire A Nanny with Us</p>
 
       <p className="lg:w-8/12 mx-auto text-center text-3xl lg:text-5xl text-secondary leading-tight lg:leading-tight font-semibold">
         Ensuring Compatibility For Your Family's Needs
       </p>
 
-      <div className="flex lg:flex-row flex-col gap-20  mt-20 lg:mt-32">
+      <div className="flex lg:flex-row flex-col gap-20 mt-20 lg:mt-32">
         <div className="lg:w-4/12">
           <i className="material-icons text-3xl text-white bg-primary py-2 px-3 rounded-full mb-10">fact_check</i>
 
-          <p className="font-bold text-secondary mb-4">Understanding Your Family Needs</p>
+          <p className="font-semibold text-secondary text-xl mb-4">Understanding Your Family Needs</p>
 
           <p className="text-sm">
             Our agency goes beyond simply connecting families with available nannies. We take the time to understand
@@ -25,7 +25,7 @@ function WhyUs() {
         <div className="lg:w-4/12">
           <i className="material-icons text-3xl text-white bg-primary py-2 px-3 rounded-full mb-10">how_to_reg</i>
 
-          <p className="font-bold text-secondary mb-4">Streamlined Selection Process</p>
+          <p className="font-semibold text-secondary text-xl mb-4">Streamlined Selection Process</p>
 
           <p className="text-sm">
             We understand that the process of hiring a nanny can be overwhelming. That's why we've developed a
@@ -37,7 +37,7 @@ function WhyUs() {
         <div className="lg:w-4/12">
           <i className="material-icons text-3xl text-white bg-primary py-2 px-3 rounded-full mb-10">verified</i>
 
-          <p className="font-bold text-secondary mb-4">Well-Trained, Certified Nannies</p>
+          <p className="font-semibold text-secondary text-xl mb-4">Well-Trained, Certified Nannies</p>
 
           <p className="text-sm">
             Your child's safety is our top priority. When you hire a nanny through our agency, you can trust that they
