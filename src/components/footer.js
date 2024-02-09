@@ -2,10 +2,10 @@ import React from "react"
 
 function Footer() {
   return (
-    <div className="w-full bg-secondary rounded-3xl pt-10">
+    <div className="w-full bg-secondary rounded-3xl pt-10 mb-3">
       <div className="w-11/12 h-full mx-auto flex lg:flex-row flex-col justify-between py-10 gap-y-20">
         <div className="lg:w-5/12">
-          <p className="text-3xl text-primary font-bold mb-5">Logo</p>
+          <p className="text-3xl text-primary font-bold mb-10">Logo</p>
 
           <p className="text-white text-sm">
             Dive into our Frequently Asked Questions page for a comprehensive guide that addresses all your queries,
@@ -18,15 +18,15 @@ function Footer() {
 
           <ul className="text-sm text-white">
             <li className="flex items-center gap-x-3 mb-5">
-              <i className="material-icons text-white">location_on</i> 8819 Ohio St. South Gate, CA 90280
+              <i className="material-icons text-primary">location_on</i> 8819 Ohio St. South Gate, CA 90280
             </li>
 
             <li className="flex items-center gap-x-3 mb-5">
-              <i className="material-icons text-white">mail</i> abc@hello.com
+              <i className="material-icons text-primary">mail</i> abc@hello.com
             </li>
 
             <li className="flex items-center gap-x-3">
-              <i className="material-icons text-white">phone</i> +1 386-688-3295
+              <i className="material-icons text-primary">phone</i> +1 386-688-3295
             </li>
           </ul>
         </div>

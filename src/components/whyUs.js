@@ -10,7 +10,7 @@ function WhyUs() {
       </p>
 
       <div className="flex lg:flex-row flex-col gap-20 mt-20 lg:mt-32">
-        <div className="lg:w-4/12">
+        <div className="lg:w-4/12 bg-primary2 px-5 py-10 rounded-xl">
           <i className="material-icons text-3xl text-white bg-primary py-2 px-3 rounded-full mb-10">fact_check</i>
 
           <p className="font-semibold text-secondary text-xl mb-4">Understanding Your Family Needs</p>
@@ -22,7 +22,7 @@ function WhyUs() {
           </p>
         </div>
 
-        <div className="lg:w-4/12">
+        <div className="lg:w-4/12 bg-primary2 px-5 py-10 rounded-xl">
           <i className="material-icons text-3xl text-white bg-primary py-2 px-3 rounded-full mb-10">how_to_reg</i>
 
           <p className="font-semibold text-secondary text-xl mb-4">Streamlined Selection Process</p>
@@ -34,7 +34,7 @@ function WhyUs() {
           </p>
         </div>
 
-        <div className="lg:w-4/12">
+        <div className="lg:w-4/12 bg-primary2 px-5 py-10 rounded-xl">
           <i className="material-icons text-3xl text-white bg-primary py-2 px-3 rounded-full mb-10">verified</i>
 
           <p className="font-semibold text-secondary text-xl mb-4">Well-Trained, Certified Nannies</p>
