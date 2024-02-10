@@ -1,5 +1,8 @@
 import React from "react"
-import image1 from "../img/discover1.png"
+import image1 from "../img/process1.jpg"
+import image2 from "../img/process2.jpg"
+import image3 from "../img/process3.jpg"
+import image4 from "../img/process4.jpg"
 
 function HowItWorks() {
   return (
@@ -14,7 +17,7 @@ function HowItWorks() {
         <div className="flex lg:flex-row flex-col justify-between items-center mb-20">
           <img src={image1} alt="image" className="w-full lg:w-5/12 object-cover rounded-xl lg:mb-0 mb-10" />
 
-          <div className="lg:w-6/12">
+          <div className="lg:w-5/12">
             <p className="text-2xl lg:text-4xl text-secondary leading-tight lg:leading-tight font-semibold mb-5 lg:mb-10">
               1. Intake Form
             </p>
@@ -28,9 +31,9 @@ function HowItWorks() {
         </div>
 
         <div className="flex lg:flex-row flex-col justify-between items-center mb-20">
-          <img src={image1} alt="image" className="w-full lg:w-5/12 object-cover rounded-xl lg:mb-0 mb-10" />
+          <img src={image2} alt="image" className="w-full lg:w-5/12 object-cover rounded-xl lg:mb-0 mb-10" />
 
-          <div className="lg:w-6/12">
+          <div className="lg:w-5/12">
             <p className="text-2xl lg:text-4xl text-secondary leading-tight lg:leading-tight font-semibold mb-5 lg:mb-10">
               2. Consultation
             </p>
@@ -44,9 +47,9 @@ function HowItWorks() {
         </div>
 
         <div className="flex lg:flex-row flex-col justify-between items-center mb-20">
-          <img src={image1} alt="image" className="w-full lg:w-5/12 object-cover rounded-xl lg:mb-0 mb-10" />
+          <img src={image3} alt="image" className="w-full lg:w-5/12 object-cover rounded-xl lg:mb-0 mb-10" />
 
-          <div className="lg:w-6/12">
+          <div className="lg:w-5/12">
             <p className="text-2xl lg:text-4xl text-secondary leading-tight lg:leading-tight font-semibold mb-5 lg:mb-10">
               3. Contract Signing
             </p>
@@ -60,9 +63,9 @@ function HowItWorks() {
         </div>
 
         <div className="flex lg:flex-row flex-col justify-between items-center mb-20">
-          <img src={image1} alt="image" className="w-full lg:w-5/12 object-cover rounded-xl lg:mb-0 mb-10" />
+          <img src={image4} alt="image" className="w-full lg:w-5/12 object-cover rounded-xl lg:mb-0 mb-10" />
 
-          <div className="lg:w-6/12">
+          <div className="lg:w-5/12">
             <p className="text-2xl lg:text-4xl text-secondary leading-tight lg:leading-tight font-semibold mb-5 lg:mb-10">
               4. Find the Right Fit
             </p>

@@ -12,7 +12,7 @@ function NavBar() {
   };
 
   return (
-    <div className="w-full mx-auto flex flex-row py-5 items-center justify-between">
+    <div className="w-11/12 mx-auto mx-auto flex flex-row py-5 items-center justify-between">
       <div className="w-fit">
         <p className="text-3xl font-bold text-primary">LOGO</p>
       </div>

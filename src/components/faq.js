@@ -1,11 +1,11 @@
 import React from "react"
-import bannerImg from "../img/banner.png"
+import faq from "../img/faq.png"
 
 function FAQ() {
   return (
     <div className="w-full bg-primary rounded-3xl">
       <div className="w-11/12 h-full mx-auto flex lg:flex-row flex-col justify-between items-center">
-        <div className="lg:w-5/12 py-20 lg:py-0">
+        <div className="lg:w-6/12 py-20 lg:py-0">
           <p className="text-3xl lg:text-5xl text-white font-semibold leading-tight lg:leading-tight mb-10">
             Got Questions? Check our FAQ’s
           </p>
@@ -22,8 +22,8 @@ function FAQ() {
           </div>
         </div>
 
-        <div className="lg:w-5/12 h-full py-10">
-          <img src={bannerImg} alt="bannerImg" className="w-full h-full object-cover" />
+        <div className="lg:w-5/12 h-full">
+          <img src={faq} alt="bannerImg" className="w-10/12 mx-auto h-full object-cover" />
         </div>
       </div>
     </div>

@@ -1,5 +1,10 @@
 import React from "react"
-import discover1 from "../img/discover1.png"
+import discover1 from "../img/discover1.jpg"
+import discover2 from "../img/discover2.jpg"
+import discover3 from "../img/discover3.jpg"
+import discover4 from "../img/discover4.jpg"
+import discover5 from "../img/discover5.jpg"
+import discover6 from "../img/discover6.jpg"
 
 function Discover() {
   return (
@@ -22,7 +27,7 @@ function Discover() {
           </div>
 
           <div className="">
-            <img src={discover1} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
+            <img src={discover3} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
             <p className="font-semibold text-secondary text-xl py-4">Sitters</p>
             <p className="text-sm">
               Evening or weekend caregivers available by phone, performing light housekeeping and childcare duties. CPR,
@@ -31,7 +36,7 @@ function Discover() {
           </div>
 
           <div className="">
-            <img src={discover1} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
+            <img src={discover4} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
             <p className="font-semibold text-secondary text-xl py-4">Nanny (Part or Full Time)</p>
             <p className="text-sm">
               Contracted for at least three months, responsible for feeding, bathing, and playtime. CPR, First Aid certification, and childcare
@@ -40,7 +45,7 @@ function Discover() {
           </div>
 
           <div className="">
-            <img src={discover1} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
+            <img src={discover5} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
             <p className="font-semibold text-secondary text-xl py-4">Specialty Nanny</p>
             <p className="text-sm">
               In addition to childcare experience, Specialty Nannies have varying qualifications that may include early
@@ -56,7 +61,7 @@ function Discover() {
           </div>
 
           <div className="">
-            <img src={discover1} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
+            <img src={discover2} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
             <p className="font-semibold text-secondary text-xl py-4">Newborn and Infant Care</p>
             <p className="text-sm">
 
@@ -67,7 +72,7 @@ function Discover() {
           </div>
 
           <div className="">
-            <img src={discover1} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
+            <img src={discover6} alt="discoverImg" className="w-full h-[250px] rounded-xl object-cover" />
             <p className="font-semibold text-secondary text-xl py-4">Overnight Nannies.</p>
             <p className="text-sm">
               Overnight nannies provide ‘off hours’ support for a specified period of time. Overnight nannies can also

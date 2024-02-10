@@ -1,5 +1,5 @@
 import React from "react"
-import bannerImg from "../img/banner.png"
+import bannerImg from "../img/banner2.jpg"
 
 function Banner() {
   return (
@@ -20,7 +20,7 @@ function Banner() {
         </div>
 
         <div className="lg:w-6/12 h-full">
-          <img src={bannerImg} alt="bannerImg" className="w-full h-full object-cover" />
+          <img src={bannerImg} alt="bannerImg" className="w-full h-full object-cover lg:py-0 py-5 rounded" />
         </div>
       </div>
     </div>
