@@ -7,7 +7,7 @@ function FAQ() {
       <div className="w-11/12 h-full mx-auto flex lg:flex-row flex-col justify-between items-center">
         <div className="lg:w-6/12 py-20 lg:py-0">
           <p className="text-3xl lg:text-5xl text-white font-semibold leading-tight lg:leading-tight mb-10">
-            Got Questions? Check our FAQ’s
+            Got Questions? Check Our Frequently Asked Questions
           </p>
 
           <p className="text-white mb-10 text-sm">
@@ -17,7 +17,7 @@ function FAQ() {
 
           <div className="">
             <button className="text-white text-sm p-4 bg-secondary mr-10 rounded-3xl">
-              See Our Frequently Asked Questions
+              Frequently Asked Questions
             </button>
           </div>
         </div>

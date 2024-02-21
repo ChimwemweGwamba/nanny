@@ -1,7 +1,26 @@
-import React from "react"
-import bannerImg from "../img/banner2.jpg"
+import React from "react";
+import bannerImg from "../img/banner2.jpg";
+import { Modal } from 'antd';
 
 function Banner() {
+
+  const handleHireNanny = () => {
+    console.log("Hiring a nanny...");
+  };
+
+  const handleBecomeNanny = () => {
+    Modal.info({
+      title: 'Become a Nanny',
+      content: (
+        <div>
+          <p>Here you can provide information and forms for becoming a nanny.</p>
+          <p>For example, you can include a registration form.</p>
+        </div>
+      ),
+      onOk() {},
+    });
+  };
+
   return (
     <div className="w-full lg:h-[80vh] bg-primary rounded-3xl">
       <div className="w-11/12 h-full mx-auto flex lg:flex-row flex-col justify-between items-center">
@@ -13,18 +32,18 @@ function Banner() {
           </p>
 
           <div className="">
-            <button className="text-white text-sm p-4 bg-secondary mr-10 rounded-3xl">Hire a nanny</button>
+            <button onClick={handleHireNanny} className="text-white text-sm p-4 bg-secondary mr-10 rounded-3xl">Hire a nanny</button>
 
-            <button className="text-secondary text-sm p-4 bg-white rounded-3xl">Become a nanny</button>
+            <button onClick={handleBecomeNanny} className="text-secondary text-sm p-4 bg-white rounded-3xl">Become a nanny</button>
           </div>
         </div>
 
         <div className="lg:w-6/12 h-full">
-          <img src={bannerImg} alt="bannerImg" className="w-full h-full object-cover lg:py-0 py-5 rounded" />
+          <img src={bannerImg} alt="Nanny Services" className="w-full h-full object-cover lg:py-0 py-5 rounded" />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Banner
+export default Banner;

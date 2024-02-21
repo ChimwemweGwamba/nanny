@@ -3,9 +3,10 @@ import bannerImg from "../img/banner.png"
 
 function BecomeNanny() {
   return (
-    <div className="w-11/12 mx-auto py-20 lg:py-32">
+    <div className="w-full bg-primary2 rounded-3xl py-20 lg:py-32 my-32">
+    <div className="w-11/12 mx-auto">
       <div className="flex lg:flex-row flex-col justify-between items-center gap-x-20 gap-x-10">
-        <div className="lg:w-6/12 py-20 lg:py-0">
+        <div className="lg:w-6/12 pb-20 lg:pb-0">
           <p className="text-3xl lg:text-5xl text-secondary font-semibold leading-tight lg:leading-tight mb-10">
             Looking for work? Become a certified Nanny Today
           </p>
@@ -16,7 +17,7 @@ function BecomeNanny() {
             Tellus consequat nisl quis nisl justo.
           </p>
 
-          <div className="flex lg:flex-row flex-col gap-7">
+          <div className="flex flex-row gap-10">
             <button className="text-white w-fit text-sm p-4 bg-secondary rounded-3xl">
               Sign Up
             </button>
@@ -28,9 +29,10 @@ function BecomeNanny() {
         </div>
 
         <div className="lg:w-5/12 bg-primary">
-          <img src={bannerImg} alt="image" className="w-full h-auto object-cover" />
+          <img src={bannerImg} alt="imageAlt" className="w-full h-auto object-cover" />
         </div>
       </div>
+    </div>
     </div>
   )
 }

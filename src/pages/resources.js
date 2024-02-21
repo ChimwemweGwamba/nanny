@@ -19,6 +19,10 @@ function Resources() {
               Embark on a transformative journey with our Nanny Training Guide, where excellence is not just a goal but
               a guarantee.
             </p>
+
+            <div className="">
+            <button className="text-white text-sm p-4 bg-secondary mr-10 rounded-3xl mt-5">Become a nanny</button>
+          </div>
           </div>
 
           <div className='lg:w-5/12 h-full'>

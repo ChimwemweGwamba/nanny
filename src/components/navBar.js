@@ -19,10 +19,11 @@ function NavBar() {
 
       <div className="hidden md:flex w-fit">
         <ul className="text-secondary text-sm font-medium flex gap-x-10">
-          <li>Hire A Nanny</li>
-          <li>Find Work</li>
-          <li>How It Works</li>
-          <li>Contact Us</li>
+          <li><a href="/">Hire A Nanny</a></li>
+          <li><a href="/resources">Find Work</a></li>
+          <li><a href="/">How It Works</a></li>
+          <li><a href="/faq">FAQ's</a></li>
+          <li><a href="/">Contact Us</a></li>
         </ul>
       </div>
 
@@ -83,10 +84,11 @@ function NavBar() {
               </svg>
             </button>
             <ul className="text-secondary text-xl font-medium">
-              <li className="py-2 mb-5">Hire A Nanny</li>
-              <li className="py-2 mb-5">Find Work</li>
-              <li className="py-2 mb-5">How It Works</li>
-              <li className="py-2 mb-5">Contact Us</li>
+              <li className="py-2 mb-5"><a href="/">Hire A Nanny</a></li>
+              <li className="py-2 mb-5"><a href="/resources">Find Work</a></li>
+              <li className="py-2 mb-5"><a href="/">How It Works</a></li>
+              <li className="py-2 mb-5"><a href="/faq">FAQ's</a></li>
+              <li className="py-2 mb-5"><a href="/">Contact Us</a></li>
             </ul>
             <button className="text-white text-sm p-4 px-7 bg-primary border border-primary rounded-3xl mt-4">Login</button>
           </div>
