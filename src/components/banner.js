@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import bannerImg from "../img/banner2.jpg"
 import emailjs from "@emailjs/browser"
 import { Modal, Form, Input, Button, message, Spin } from "antd"
-import { LoadingOutlined } from '@ant-design/icons';
+import { LoadingOutlined } from '@ant-design/icons'
 
 function Banner() {
   const [isModalVisible, setIsModalVisible] = useState(false)
@@ -97,7 +97,7 @@ function Banner() {
             type='primary'
             htmlType='submit'
             style={{ backgroundColor: "#B78D5A" }}
-            loading={isLoading} // Add loading prop to the submit button
+            loading={isLoading}
           >
             Submit
           </Button>,
