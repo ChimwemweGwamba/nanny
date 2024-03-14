@@ -25,8 +25,8 @@ function Banner() {
 
   const onHireNannyFinish = (values) => {
     console.log("Submitted values:", values)
-
-    setIsHireModalVisible(false)
+    setTimeout(() => setIsHireModalVisible(false), 2000)
+    message.success(`Form submitted successfully! A member of our team will contact you within the next 24 hours`)
   }
 
   const handleOk = async () => {
@@ -119,12 +119,13 @@ function Banner() {
             Submit
           </Button>,
         ]}
+        width={1000}
       >
         <div>
           {isSubmitted ? (
             <p className='mb-5 text-green-500'>Form submitted successfully!</p>
           ) : (
-            <p className='mb-5'>Fill out the form below to become a nanny:</p>
+            <p className='mb-5'>Fill out the form below to become a nanny</p>
           )}
           <Form form={form} name='myForm' onFinish={onFinish} layout='vertical' requiredMark={false}>
             <Form.Item label='Name' name='name' rules={[{ required: true, message: "Please input your name!" }]}>
@@ -171,6 +172,7 @@ function Banner() {
             Submit
           </Button>,
         ]}
+        width={1000}
       >
         <div>
           <h3 className='font-bold text-primary capitalize'>Why us?</h3>
@@ -330,6 +332,20 @@ function Banner() {
               >
                 <Input.TextArea />
               </Form.Item>
+              <Form.Item
+              label='Email'
+              name='email'
+              rules={[{ required: true, type: "email", message: "Please input a valid email!" }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              label='Phone Number'
+              name='phone'
+              rules={[{ required: true, message: "Please input your phone number!" }]}
+            >
+              <Input />
+            </Form.Item>
             </Form>
           </div>
         </div>
