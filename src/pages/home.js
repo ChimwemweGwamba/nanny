@@ -15,10 +15,18 @@ function Home() {
       <Banner />
       <WhyUs /> 
       <Discover /> 
+
+      <div id="howItWorks">
       <HowItWorks />
+      </div>
+
       <FAQ />
       <BecomeNanny />
+
+      <div id="contact">
       <Footer />
+      </div>
+
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HashLink } from "react-router-hash-link"
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,9 +22,9 @@ function NavBar() {
         <ul className="text-secondary text-sm font-medium flex gap-x-10">
           <li><a href="/">Hire A Nanny</a></li>
           <li><a href="/resources">Find Work</a></li>
-          <li><a href="/">How It Works</a></li>
+          <li><HashLink to='/#howItWorks'>How It Works</HashLink></li>
           <li><a href="/faq">FAQ's</a></li>
-          <li><a href="/">Contact Us</a></li>
+          <li><HashLink to='/#contact'>Contact</HashLink></li>
         </ul>
       </div>
 
