@@ -56,6 +56,10 @@ function BecomeNanny() {
     }
   }
 
+  const handleTrainingProgramsClick = () => {
+    window.location.href = "/resources"
+  }
+
   return (
     <div className="w-full bg-primary2 rounded-3xl py-20 lg:py-32 my-32">
     <div className="w-11/12 mx-auto">
@@ -76,7 +80,7 @@ function BecomeNanny() {
               Sign Up
             </button>
 
-            <button className="text-white w-fit text-sm p-4 bg-secondary mr-10 rounded-3xl">
+            <button onClick={handleTrainingProgramsClick} className="text-white w-fit text-sm p-4 bg-secondary mr-10 rounded-3xl">
               Training Programs
             </button>
           </div>
