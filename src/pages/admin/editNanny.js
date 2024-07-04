@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from "react"
-import { uploadResource, authStatus } from "../../firebase"
-import { useNavigate } from "react-router-dom"
+import { updateResource } from "../../firebase"
+import { useLocation, useNavigate } from "react-router-dom"
 import Loader from "../../components/loader"
 // import AdminNavtab from "../../components/adminNavtab"
+import { CloseCircleTwoTone } from "@ant-design/icons"
 
-const AddNanny = () => {
+const EditNanny = () => {
+  let { state } = useLocation()
   const navigate = useNavigate()
   const [Files, setFiles] = useState([])
   const [loading, setLoading] = useState(false)
-  const [resource, setResource] = useState({
-    name: "",
-    age: "",
-    category: [],
-    images: [],
-    about: "",
-    education: "",
-    skills: "",
-  })
+  const [resource, setResource] = useState(state)
 
-  const checkStatus = async () => {
-    // try {
-    //   let auth = await authStatus()
-    //   auth ? console.log("logged") : navigate("/admin/login")
-    // } catch (err) {
-    //   alert("error: unable to authenticate", err)
-    //   navigate("/admin/login")
-    // }
-  }
+//   const checkStatus = async () => {
+//     try {
+//       let auth = await authStatus()
+//       auth ? console.log("logged") : navigate("/admin/login")
+//     } catch (err) {
+//       alert("error: unable to authenticate", err)
+//       navigate("/admin/login")
+//     }
+//   }
 
   useEffect(() => {
     // checkStatus()
@@ -37,9 +31,14 @@ const AddNanny = () => {
     setResource((prevData) => ({ ...prevData, [name]: value }))
   }
 
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0]
-    setFiles([selectedFile])
+  const handleDeleteItem = (name) => {
+    const updatedObject = { ...resource }
+    const itemIndex = updatedObject.images.findIndex((item) => item.name === name)
+
+    if (itemIndex !== -1) {
+      updatedObject.images.splice(itemIndex, 1)
+    }
+    setResource(updatedObject)
   }
 
   const handleCategoryChange = (e) => {
@@ -50,23 +49,25 @@ const AddNanny = () => {
     setResource({ ...resource, category: updatedCategories })
   }
 
+  const handleFileInputChange = (event) => {
+    const selectedFile = event.target.files[0]
+    setFiles([selectedFile])
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log("logging data: ", resource)
 
     try {
       let percentage = 0.0
       setLoading(true)
 
-      await uploadResource(Files, resource, "nannies", (progress) => {
+      await updateResource(Files, resource, "nannies", (progress) => {
         percentage += parseInt(progress.toFixed(2), 10)
         console.log(percentage)
       })
 
-      console.log("navig")
-
       setLoading(false)
-     navigate("/admin/index")
+      navigate("/admin/index")
     } catch (error) {
       setLoading(false)
       console.log("error: ", error)
@@ -74,13 +75,13 @@ const AddNanny = () => {
   }
 
   return (
-    <div className="">
+    <div className=''>
       {/* <AdminNavtab /> */}
 
       {loading && <Loader />}
 
-      <div className="w-11/12 lg:w-10/12 mx-auto my-10">
-        <p className="text-xl lg:text-3xl text-[#B36824] font-medium pb-10">Add Nanny</p>
+      <div className='w-11/12 lg:w-10/12 mx-auto my-10'>
+        <p className='text-xl lg:text-3xl text-[#B36824] font-medium pb-10'>Edit Nanny</p>
 
         <form onSubmit={handleSubmit} className="px-3 py-5 border">
           <div className="mb-4">
@@ -182,18 +183,38 @@ const AddNanny = () => {
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="picture" className="text-xs text-[#B36824]">
-              Picture
+<div className='mb-4'>
+            <label htmlFor='houseImages' className='text-xs text-[#B36824]'>
+              House Images
             </label>
+
+            {resource.images && (
+              <>
+                {resource.images.map((file, index) => (
+                  <div className='w-fit relative border rounded bg-primary px-5 py-3 flex-row' id={index}>
+                    <p className=''>
+                      <a className='text-secondary underline' href={file.file}>
+                        {file.name}
+                      </a>
+                    </p>
+
+                    <CloseCircleTwoTone
+                      onClick={() => handleDeleteItem(file.name)}
+                      className='absolute -top-1 -right-1'
+                    />
+                  </div>
+                ))}{" "}
+              </>
+            )}
+
             <input
-              type="file"
-              accept="image/*"
-              id="picture"
-              name="picture"
-              onChange={handleFileChange}
-              className="mt-1 p-2 w-full border"
-              required
+              type='file'
+              id='houseImages'
+              name='houseImages'
+              onChange={handleFileInputChange}
+              multiple
+              className='form-input mt-1 text-sm px-1 py-2 block w-full border'
+              accept='image/*'
             />
           </div>
 
@@ -208,4 +229,4 @@ const AddNanny = () => {
   )
 }
 
-export default AddNanny
+export default EditNanny
