@@ -1,41 +1,29 @@
 import React, { useEffect } from "react"
-// import { authStatus } from "../../firebase"
+import { authStatus } from "../../firebase"
 import { useLocation, useNavigate } from "react-router-dom"
-// import AdminNavtab from "../../components/adminNavtab"
+import AdminNavtab from "../../components/adminNavtab"
 
 const ViewNanny = () => {
   let { state } = useLocation()
   const navigate = useNavigate()
 
-  //   const checkStatus = async () => {
-  //     try {
-  //       let auth = await authStatus()
-  //       auth ? console.log("logged") : navigate("/admin/login")
-  //     } catch (err) {
-  //       alert("error: unable to authenticate", err)
-  //       navigate("/admin/login")
-  //     }
-  //   }
-
-  const getFormattedDate = (dateString) => {
-    const formattedDate = new Date(dateString)
-    const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" }
-    return formattedDate.toLocaleDateString("en-US", options)
-  }
-
-  const getFormattedTime24Hour = (dateString) => {
-    const formattedDate = new Date(dateString)
-    const options = { hour: "numeric", minute: "numeric", hour12: false }
-    return formattedDate.toLocaleTimeString("en-US", options)
-  }
+    const checkStatus = async () => {
+      try {
+        let auth = await authStatus()
+        auth ? console.log("logged") : navigate("/admin/login")
+      } catch (err) {
+        alert("error: unable to authenticate", err)
+        navigate("/admin/login")
+      }
+    }
 
   useEffect(() => {
-    // checkStatus()
+    checkStatus()
   }, [])
 
   return (
     <div>
-      {/* <AdminNavtab /> */}
+      <AdminNavtab />
 
       <div className="w-11/12 lg:w-10/12 mx-auto my-10 border">
         <p className="text-md font-medium text-white bg-[#B36824] amber-500 px-3 py-5">View Nanny</p>

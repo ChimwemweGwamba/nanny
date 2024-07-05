@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { uploadResource, authStatus } from "../../firebase"
 import { useNavigate } from "react-router-dom"
 import Loader from "../../components/loader"
-// import AdminNavtab from "../../components/adminNavtab"
+import AdminNavtab from "../../components/adminNavtab"
 
 const AddNanny = () => {
   const navigate = useNavigate()
@@ -19,17 +19,17 @@ const AddNanny = () => {
   })
 
   const checkStatus = async () => {
-    // try {
-    //   let auth = await authStatus()
-    //   auth ? console.log("logged") : navigate("/admin/login")
-    // } catch (err) {
-    //   alert("error: unable to authenticate", err)
-    //   navigate("/admin/login")
-    // }
+    try {
+      let auth = await authStatus()
+      auth ? console.log("logged") : navigate("/admin/login")
+    } catch (err) {
+      alert("error: unable to authenticate", err)
+      navigate("/admin/login")
+    }
   }
 
   useEffect(() => {
-    // checkStatus()
+    checkStatus()
   }, [])
 
   const handleInputChange = (e) => {
@@ -66,7 +66,7 @@ const AddNanny = () => {
       console.log("navig")
 
       setLoading(false)
-     navigate("/admin/index")
+     navigate("/admin/indexnanny")
     } catch (error) {
       setLoading(false)
       console.log("error: ", error)
@@ -75,7 +75,7 @@ const AddNanny = () => {
 
   return (
     <div className="">
-      {/* <AdminNavtab /> */}
+      <AdminNavtab />
 
       {loading && <Loader />}
 

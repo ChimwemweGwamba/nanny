@@ -6,10 +6,10 @@ import "ag-grid-community/styles/ag-grid.css"
 import "ag-grid-community/styles/ag-theme-alpine.css"
 import Loader from "../../components/loader"
 import { Modal } from "antd"
-// import AdminNavtab from "../../components/adminNavtab"
+import AdminNavtab from "../../components/adminNavtab"
 import { useNavigate } from "react-router-dom"
 
-function AdminIndex() {
+function IndexNanny() {
   const [listing, setListing] = useState("")
   const [loading, setLoading] = useState(false)
   const [deleteListingId, setDeleteListingId] = useState("")
@@ -31,18 +31,18 @@ function AdminIndex() {
     }
   }
 
-//   const checkStatus = async () => {
-//     try {
-//       let auth = await authStatus()
-//       auth ? console.log("logged") : navigate("/admin/login")
-//     } catch (err) {
-//       alert("error: unable to authenticate", err)
-//       navigate("/admin/login")
-//     }
-//   }
+  const checkStatus = async () => {
+    try {
+      let auth = await authStatus()
+      auth ? console.log("logged") : navigate("/admin/login")
+    } catch (err) {
+      alert("error: unable to authenticate", err)
+      navigate("/admin/login")
+    }
+  }
 
   useEffect(() => {
-    // checkStatus()
+    checkStatus()
     getListings()
   }, [])
 
@@ -109,7 +109,7 @@ function AdminIndex() {
 
   return (
     <div>
-      {/* <AdminNavtab /> */}
+      <AdminNavtab />
 
       <Modal
         title='Delete Listing'
@@ -158,4 +158,4 @@ function AdminIndex() {
   )
 }
 
-export default AdminIndex
+export default IndexNanny

@@ -83,6 +83,8 @@ export const uploadResource = async (files, data, resource, progressCallback) =>
 export const updateResource = async (files, data, resource, progressCallback) => {
   const resourceId = data.id
 
+  console.log(files)
+
   //upload images and get storage url
   const uploadPromises = files.map((file) => {
     return new Promise((resolve, reject) => {
